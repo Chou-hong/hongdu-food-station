@@ -1,0 +1,33 @@
+# ============================================================
+# 红都食驿 本地开发配置示例
+# 使用方法：复制本文件为 application-dev.yml，填入真实值后启动
+# 注意：application-dev.yml 已被 .gitignore 忽略，不会提交到仓库
+# ============================================================
+hongdu:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: hongdu_food_station
+    username: root
+    password: your-db-password
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: your-access-key-id
+    access-key-secret: your-access-key-secret
+    bucket-name: your-bucket-name
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    database: 10
+  wechat:
+    appid: your-wechat-appid
+    secret: your-wechat-secret
+    mchid: your-mch-id
+    mchSerialNo: your-mch-serial-no
+    privateKeyFilePath: /path/to/apiclient_key.pem
+    apiV3Key: your-api-v3-key
+    weChatPayCertFilePath: /path/to/wechatpay-cert.pem
+    notifyUrl: https://your-domain/notify/paySuccess
+    refundNotifyUrl: https://your-domain/notify/refundSuccess

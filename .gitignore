@@ -1,0 +1,107 @@
+# ============================================================
+# 红都食驿（Hongdu Food Station）.gitignore
+# 多模块项目：Spring Boot 后端 + Vue 管理端 + 微信小程序
+# ============================================================
+
+# ---------- Maven / Java 构建产物 ----------
+target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+*.7z
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ---------- IDE / 编辑器 ----------
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+.springBeans
+.sts4-cache
+.apt_generated
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+.history/
+*.swp
+*.swo
+*~
+
+# ---------- Node / 前端构建 ----------
+node_modules/
+node-modules/
+dist/
+.vuepress/dist/
+coverage/
+/tests/**/coverage/
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# ---------- 日志 / 运行时报告 ----------
+logs/
+*.log
+report.*.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------- 环境变量 / 本地敏感配置 ----------
+.env.local
+.env.*.local
+# 本地开发配置含数据库密码、第三方密钥，禁止提交；请复制为 application-dev.yml 后修改
+application-dev.yml
+# 保留示例模板
+!application-dev.yml.example
+
+# ---------- 微信小程序 ----------
+project.private.config.json
+
+# ---------- 系统 / 临时文件 ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.tmp
+*.temp
+*.bak
+*.old
+
+# ---------- 可执行文件 ----------
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ---------- 项目资料（不入库） ----------
+HELP.md
+讲义/
+资料/
+PPT/

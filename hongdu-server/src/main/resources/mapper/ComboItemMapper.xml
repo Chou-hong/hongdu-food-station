@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hongdu.mapper.ComboItemMapper">
+
+    <select id="getComboIdsByProductIds" resultType="java.lang.Long">
+        select combo_id from combo_item where product_id in
+        <foreach collection="productIds" item="productId" separator="," open="(" close=")">
+            #{productId}
+        </foreach>
+    </select>
+
+    <insert id="insertBatch" parameterType="list">
+        insert into combo_item (combo_id,product_id,name,price,copies)
+        values
+        <foreach collection="comboItemes" item="sd" separator=",">
+            (#{sd.comboId},#{sd.productId},#{sd.name},#{sd.price},#{sd.copies})
+        </foreach>
+    </insert>
+</mapper>

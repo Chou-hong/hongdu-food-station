@@ -1,0 +1,4 @@
+# Spring Boot 3.x 不再读取 META-INF/spring.factories 中的自动配置
+# druid-spring-boot-starter 1.2.23 仍仅通过 spring.factories 注册自动配置，
+# 此处按 Spring Boot 3 官方迁移规范手动注册 Druid 数据源自动配置
+com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
